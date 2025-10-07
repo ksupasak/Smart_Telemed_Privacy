@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utilities */
+.container-slim { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+.section { @apply py-16 md:py-24; }
+.lead { @apply text-gray-600 leading-relaxed; }
+
+/* Gradient background used in hero */
+.bg-hero {
+  background: radial-gradient(1250px 500px at 60% 5%, #dffaf6 0%, rgba(219, 252, 247, 0.6) 40%, transparent 60%),
+              linear-gradient(180deg, #e8fffb 0%, #f8fffe 30%, #ffffff 100%);
+}
+
+@layer utilities {
+  .perspective-1200 { perspective: 1200px; }
+  .preserve-3d { transform-style: preserve-3d; }
+  .backface-hidden { backface-visibility: hidden; }
+  .rotate-y-180 { transform: rotateY(180deg); }
+}
