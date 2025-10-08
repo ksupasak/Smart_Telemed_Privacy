@@ -4,9 +4,9 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "remix vite:dev",
-    "build": "remix vite:build",
-    "start": "remix-serve build/server/index.js",
+    "dev": "vite:dev",
+    "build": "vite:build",
+    "start": "vite-serve build/server/index.js",
     "preview": "vite preview"
   },
   "dependencies": {
