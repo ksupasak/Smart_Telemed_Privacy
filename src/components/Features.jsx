@@ -1,6 +1,6 @@
 import { useState } from 'react';
-
-const features = [
+import { useLang } from '../i18n/LangContext';
+const featuresTh = [
   {
     id: 'search',
     icon: '/images/icon_search.png',
@@ -35,6 +35,45 @@ const features = [
       'ดูวันนัดถัดไปได้ทันที',
       'ตรวจสอบประวัติการพบแพทย์ย้อนหลัง',
       'เข้าถึงผลตรวจและสรุปการรักษาอย่างเป็นระบบ',
+    ],
+  },
+];
+
+const featuresEn = [
+  {
+    id: 'search',
+    icon: '/images/icon_search.png',
+    title: 'Vital signs tracking',
+    description:
+      'Update health metrics from home devices and securely share with doctors in real time.',
+    highlights: [
+      'Auto-save measurements with full history',
+      'Supports weight, height, BMI, blood glucose, temperature, blood pressure, respiratory rate',
+      'Send data to doctors instantly',
+    ],
+  },
+  {
+    id: 'monitor',
+    icon: '/images/icon_doctor.png',
+    title: 'Follow-up with doctors',
+    description:
+      'Consult via high-quality video calls without traveling, for assessment and follow-up.',
+    highlights: [
+      'High-quality video for close observation',
+      'Real-time consultation and advice',
+      'Summary recorded for later review',
+    ],
+  },
+  {
+    id: 'appointment',
+    icon: '/images/icon_appoint.png',
+    title: 'Manage appointments',
+    description:
+      'Check upcoming visits, queue order, and browse visit history with ease.',
+    highlights: [
+      'See next appointment at a glance',
+      'Review past visits',
+      'Access test results and treatment summaries',
     ],
   },
 ];
@@ -110,10 +149,12 @@ function FeatureCard({ feature }) {
 }
 
 export default function Features() {
+  const { lang } = useLang();
+  const features = lang === 'en' ? featuresEn : featuresTh;
   return (
     <section className="section">
       <div className="container-slim">
-  <h2 className="text-center text-2xl font-semibold md:text-3xl">ฟังก์ชันการใช้งานของ Smart Telemed</h2>
+        <h2 className="text-center text-2xl font-semibold md:text-3xl">{lang === 'en' ? 'Smart Telemed features' : 'ฟังก์ชันการใช้งานของ Smart Telemed'}</h2>
         <div className="mt-10 grid gap-8 md:grid-cols-3">
           {features.map((feature) => (
             <FeatureCard key={feature.id} feature={feature} />

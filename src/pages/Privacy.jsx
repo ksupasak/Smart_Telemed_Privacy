@@ -1,8 +1,17 @@
+import { useLang } from '../i18n/LangContext';
+
 export default function Privacy() {
+  const { lang } = useLang();
+  const isEn = lang === 'en';
   return (
     <section className="section">
       <div className="container-slim max-w-3xl">
-        <h1 className="text-3xl font-bold">นโยบายความเป็นส่วนตัว - Smart Telemed V4</h1>
+        <h1 className="text-3xl font-bold">{isEn ? 'Privacy Policy - Smart Telemed V4' : 'นโยบายความเป็นส่วนตัว - Smart Telemed V4'}</h1>
+        {isEn && (
+          <div className="mt-2 rounded-md bg-amber-50 border border-amber-200 p-3 text-amber-800 text-sm">
+            English version is being prepared. The Thai official policy is shown below.
+          </div>
+        )}
         <div className="mt-2 text-gray-600 space-y-1">
           <p><strong>บริษัท E.S.M. Solution Co. Ltd</strong></p>
           <p>อัปเดตล่าสุด: 21 ตุลาคม 2568</p>

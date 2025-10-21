@@ -1,4 +1,7 @@
+import { useLang } from '../i18n/LangContext';
+
 export function AppBadges() {
+  const { t } = useLang();
   // ปุ่มพร้อม “เงาใต้ปุ่ม” โดยใช้ pseudo-element (after) เป็นเงาวงรีด้านล่าง
   const btn =
     "group relative inline-flex items-center gap-3 rounded-2xl border border-gray-200 " +
@@ -11,15 +14,15 @@ export function AppBadges() {
 
   return (
     <div className="mt-6 flex gap-3 flex-wrap">
-      <a href="#" className={btn} aria-label="Download on the App Store">
+  <a href="#" className={btn} aria-label="Download on the App Store">
         <img
           className="h-11 w-11"
           src="https://img.icons8.com/?size=100&id=4PbFeZOKAc61&format=png&color=000000"
           alt="Apple"
         />
         <div className="text-left leading-tight">
-          <div className="text-[10px] leading-none text-gray-500">ดาวน์โหลดที่</div>
-          <div className="text-sm font-semibold">App Store</div>
+          <div className="text-[10px] leading-none text-gray-500">{t('footer.downloadAt')}</div>
+          <div className="text-sm font-semibold">{t('footer.appstore')}</div>
         </div>
       </a>
 
@@ -30,8 +33,8 @@ export function AppBadges() {
           alt="Google Play"
         />
         <div className="text-left leading-tight">
-          <div className="text-[10px] leading-none text-gray-500">ดาวน์โหลดที่</div>
-          <div className="text-sm font-semibold">Google Play</div>
+          <div className="text-[10px] leading-none text-gray-500">{t('footer.downloadAt')}</div>
+          <div className="text-sm font-semibold">{t('footer.playstore')}</div>
         </div>
       </a>
     </div>

@@ -19,3 +19,88 @@
   .backface-hidden { backface-visibility: hidden; }
   .rotate-y-180 { transform: rotateY(180deg); }
 }
+
+/* Animated wave helpers */
+.wave {
+  position: absolute;
+  left: 0;
+  right: 0; /* will be constrained by parent width */
+  bottom: 0;
+  height: 128px; /* taller for fuller visibility */
+  pointer-events: none;
+}
+.wave .wave-inner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 200%; /* oversize so it slides and still fills */
+  animation: wave-slide 16s linear infinite;
+  will-change: transform;
+}
+.wave-second .wave-inner {
+  animation-duration: 24s;
+  animation-delay: -6s;
+}
+.wave-second { transform: translateY(8px); }
+.wave-svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor; /* follow text-brand */
+}
+
+/* Subtle vertical bob for organic feel */
+.bob { animation: bob 5s ease-in-out infinite; }
+.bob-slow { animation: bob 7s ease-in-out infinite; }
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+@keyframes wave-slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .wave .wave-inner, .wave-second .wave-inner { animation: none; transform: none; }
+}
+
+/* Parallax brand waves scoped to left column */
+.brand-waves {
+  position: absolute;
+  inset-inline: 0; /* full width of section */
+  bottom: clamp(96px, 20vh, 240px); /* sit below badges and behind phone */
+  height: clamp(90px, 12vh, 150px);
+  pointer-events: none;
+  z-index: 0;
+}
+.brand-waves-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.parallax > use {
+  animation: move-forever 20s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 7s; }
+.parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 10s; }
+.parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 13s; }
+.parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 20s; }
+@keyframes move-forever {
+  0% { transform: translate3d(-90px,0,0); }
+  100% { transform: translate3d(85px,0,0); }
+}
+@media (max-width: 768px) {
+  .brand-waves { height: 72px; }
+}
+@media (min-width: 768px) {
+  .brand-waves { bottom: clamp(120px, 22vh, 260px); }
+}
+@media (min-width: 1024px) {
+  .brand-waves { bottom: clamp(140px, 24vh, 280px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .parallax > use { animation: none; }
+}
