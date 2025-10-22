@@ -6,23 +6,511 @@ export default function Terms() {
   return (
     <section className="section">
       <div className="container-slim max-w-3xl">
-        <h1 className="text-3xl font-bold">{isEn ? 'Terms of Service - Smart Telemed V4' : 'ข้อกำหนดในการให้บริการ - Smart Telemed V4'}</h1>
-        {isEn && (
-          <div className="mt-2 rounded-md bg-amber-50 border border-amber-200 p-3 text-amber-800 text-sm">
-            English version is being prepared. The Thai official terms are shown below.
-          </div>
-        )}
+        <h1 className="text-3xl font-bold">{isEn ? 'Terms of Service - Smart Telemed' : 'ข้อกำหนดในการให้บริการ - Smart Telemed'}</h1>
         <div className="mt-2 text-gray-600 space-y-1">
-          <p><strong>บริษัท E.S.M. Solution Co. Ltd</strong></p>
-          <p>อัปเดตล่าสุด: 21 ตุลาคม 2568</p>
-          <p>เวอร์ชัน: 1.0</p>
+          <p><strong>{isEn ? 'E.S.M. Solution Co. Ltd' : 'บริษัท E.S.M. Solution Co. Ltd'}</strong></p>
+          <p>{isEn ? 'Last Updated: October 21, 2025' : 'อัปเดตล่าสุด: 21 ตุลาคม 2568'}</p>
+          <p>{isEn ? 'Version: 1.0' : 'เวอร์ชัน: 1.0'}</p>
         </div>
 
         <div className="mt-8 space-y-8 text-gray-700 leading-relaxed">
+          {isEn ? (
+            <>
+              <section>
+                <h2 className="text-xl font-semibold">1. Acceptance of Terms</h2>
+                <p className="mt-2">
+                  By downloading, installing, registering, or using the Smart Telemed application ("App", "Service"), you agree to accept and comply with these Terms of Service ("Terms") in their entirety.
+                </p>
+                <p className="mt-2">If you do not accept these Terms, please do not use our Service.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">2. Definitions</h2>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li><strong>"Company"</strong> means E.S.M. Solution Co. Ltd</li>
+                  <li><strong>"User"</strong> means any person using the Smart Telemed application</li>
+                  <li><strong>"Patient"</strong> means a User receiving medical services</li>
+                  <li><strong>"Medical Personnel"</strong> means doctors, nurses, and health officials using the App</li>
+                  <li><strong>"Community Health Volunteer"</strong> means village health volunteers or community health assistants</li>
+                  <li><strong>"Service"</strong> means telemedicine services provided through the Smart Telemed application</li>
+                  <li><strong>"Medical Device"</strong> means vital sign measurement devices connected to the App</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">3. Nature of Service</h2>
+                <h3 className="mt-4 font-medium">3.1 Core Services</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li><strong>Remote Medical Consultation</strong>: Via video call and online communication systems</li>
+                  <li><strong>Medical Device Connectivity</strong>: For measuring and recording vital signs</li>
+                  <li><strong>Health Data Management</strong>: Recording, tracking, and reporting examination results</li>
+                  <li><strong>Doctor Appointments</strong>: Booking and managing treatment schedules</li>
+                  <li><strong>Community Health Volunteer Support</strong>: Tools for volunteers in patient care</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">3.2 Service Scope</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Service is available in Thailand only</li>
+                  <li>Registration and identity verification required before use</li>
+                  <li>Must be within the service area of participating public health facilities</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">3.3 Supported Devices</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>iOS and Android devices with Bluetooth 4.0 or higher</li>
+                  <li>Certified medical devices supported by the App</li>
+                  <li>Stable internet connection</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">4. Registration and Usage</h2>
+                <h3 className="mt-4 font-medium">4.1 Registration</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Users must provide accurate, complete, and current information</li>
+                  <li>Patient registration requires identity verification via national ID card or government documents</li>
+                  <li>Medical personnel must have valid professional licenses</li>
+                  <li>Community health volunteers must be certified by relevant authorities</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">4.2 User Responsibilities</h3>
+                <p className="mt-2">Users agree to:</p>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Provide accurate information and update when changes occur</li>
+                  <li>Maintain confidentiality of login credentials</li>
+                  <li>Not use others' accounts or allow others to use their account</li>
+                  <li>Use the Service only for its intended purposes</li>
+                  <li>Comply with applicable laws and regulations</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">4.3 Account Suspension and Termination</h3>
+                <p className="mt-2">The Company may suspend or terminate accounts in cases of:</p>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Providing false or inaccurate information</li>
+                  <li>Misuse of Service or violation of these Terms</li>
+                  <li>Actions that may cause harm to the system or other users</li>
+                  <li>Violation of laws or medical ethics</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">5. Medical Services and Limitations</h2>
+                <h3 className="mt-4 font-medium">5.1 Nature of Medical Services</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Preliminary consultation and symptom monitoring services</li>
+                  <li>Health advice and disease prevention guidance</li>
+                  <li>Vital sign monitoring and recording via medical devices</li>
+                  <li>Urgency assessment and referral</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">5.2 Service Limitations</h3>
+                <p className="mt-2">Smart Telemed Service <strong>CANNOT</strong>:</p>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Fully replace direct medical examination by doctors</li>
+                  <li>Be used for emergencies requiring immediate treatment</li>
+                  <li>Diagnose complex diseases or those requiring special examinations</li>
+                  <li>Prescribe controlled substances or narcotics</li>
+                  <li>Guarantee specific treatment outcomes</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">5.3 Emergency Cases</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>In emergencies, patients must call 1669 or go to hospital immediately</li>
+                  <li>The App has alert systems for severely abnormal vital signs</li>
+                  <li>Medical personnel will recommend referral when necessary</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">5.4 Data Accuracy</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Data accuracy depends on measurement devices and correct usage</li>
+                  <li>Users must use only certified medical devices</li>
+                  <li>App data should support diagnosis, not be the sole basis</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">6. Medical Devices and Connectivity</h2>
+                <h3 className="mt-4 font-medium">6.1 Supported Devices</h3>
+                <p className="mt-2">The App supports the following medical devices:</p>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li><strong>Blood Pressure Monitors</strong>: A&amp;D UA-651BLE, Beurer BM57, Yuwell YE680A</li>
+                  <li><strong>Pulse Oximeters</strong>: Bluetooth-enabled Pulse Oximeter devices</li>
+                  <li><strong>Thermometers</strong>: Beurer FT95 and equivalent devices</li>
+                  <li><strong>Weight Scales</strong>: Xiaomi Mi Body Scale, BFS200B</li>
+                  <li><strong>Glucometers</strong>: Yuwell Glucometer and supported devices</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">6.2 Device Usage Responsibilities</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Users must follow manufacturer's instructions</li>
+                  <li>Maintain devices in good condition</li>
+                  <li>Calibrate devices as scheduled</li>
+                  <li>Report any device malfunctions</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">6.3 Device Warranty</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Company does not warrant third-party medical devices</li>
+                  <li>Warranty follows manufacturer's terms and conditions</li>
+                  <li>Company will assist in contacting service centers when necessary</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">7. Data and Privacy</h2>
+                <h3 className="mt-4 font-medium">7.1 Privacy Policy Compliance</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>App usage is subject to Smart Telemed Privacy Policy</li>
+                  <li>Users should read and understand the Privacy Policy before use</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">7.2 Medical Data Sharing</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Health data will be shared only with relevant medical personnel</li>
+                  <li>Data sharing requires patient consent or as required by law</li>
+                  <li>Data will be encrypted and protected by international standards</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">7.3 Data Retention</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Medical records will be retained for 10 years per medical law</li>
+                  <li>Usage data will be retained for 2 years or until no longer necessary</li>
+                  <li>Users may request data deletion where permitted by law</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">8. Service Fees and Payment</h2>
+                <h3 className="mt-4 font-medium">8.1 Service Fees</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Basic App usage is free of charge</li>
+                  <li>Doctor consultation services may incur fees as specified</li>
+                  <li>Fees will be notified in advance before service use</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">8.2 Payment</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Payment through secure and certified systems</li>
+                  <li>Supports credit/debit card and Mobile Banking payment</li>
+                  <li>Receipts will be sent via email or in-app</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">8.3 Refunds</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Refunds follow the specified refund policy</li>
+                  <li>Appointment cancellations require at least 2 hours advance notice</li>
+                  <li>Refunds will be processed within 7-14 business days</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">9. Intellectual Property</h2>
+                <h3 className="mt-4 font-medium">9.1 Copyright and Trademarks</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Smart Telemed App and all content are Company property</li>
+                  <li>Reproduction, distribution, or modification without authorization is prohibited</li>
+                  <li>Trademarks and logos belong to the Company and related third parties</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">9.2 Permitted Use</h3>
+                <p className="mt-2">Users are permitted to:</p>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Use the App for personal and non-commercial purposes</li>
+                  <li>Download and use on personal devices</li>
+                  <li>Print documents for personal use only</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">9.3 Intellectual Property Infringement</h3>
+                <p className="mt-2">Prohibited actions:</p>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Copying, modifying, or distributing software</li>
+                  <li>Reverse engineering</li>
+                  <li>Creating derivative or adapted works from the App</li>
+                  <li>Commercial use without authorization</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">10. Limitation of Liability</h2>
+                <h3 className="mt-4 font-medium">10.1 Liability Limitations</h3>
+                <p className="mt-2">The Company shall not be liable for:</p>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Indirect damages, special damages, or consequential damages</li>
+                  <li>Loss of data, profits, or revenue</li>
+                  <li>Damages from medical device usage</li>
+                  <li>Damages from service interruptions</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">10.2 Warranty Limitations</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Service provided "As Is"</li>
+                  <li>No guarantee that Service will be error-free or uninterrupted</li>
+                  <li>No guarantee of medical device data accuracy</li>
+                  <li>No guarantee of treatment outcomes or diagnoses</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">10.3 Maximum Liability Amount</h3>
+                <p className="mt-2">Maximum liability limited to the lesser of:</p>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Service fees paid by User in the past 12 months</li>
+                  <li>Or 10,000 Baht</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">11. Indemnification</h2>
+                <p className="mt-2">Users agree to indemnify and hold the Company harmless from:</p>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Claims, lawsuits, or damages arising from User's use</li>
+                  <li>User's violation of these Terms</li>
+                  <li>User's violation of third-party rights</li>
+                  <li>Illegal or inappropriate use of Service</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">12. Termination and Service Discontinuation</h2>
+                <h3 className="mt-4 font-medium">12.1 Termination by User</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Users may terminate Service use at any time</li>
+                  <li>Termination does not affect existing obligations</li>
+                  <li>Data will be deleted per Privacy Policy</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">12.2 Termination by Company</h3>
+                <p className="mt-2">Company may terminate Service in cases of:</p>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Serious violation of Terms by User</li>
+                  <li>Force majeure events beyond control</li>
+                  <li>Business policy changes</li>
+                  <li>Compliance with new laws</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">12.3 Effects of Termination</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>App usage rights will terminate immediately</li>
+                  <li>Certain Terms will continue to apply</li>
+                  <li>Data will be managed per Privacy Policy</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">13. Governing Law and Dispute Resolution</h2>
+                <h3 className="mt-4 font-medium">13.1 Governing Law</h3>
+                <p className="mt-2">These Terms are governed by and interpreted under Thai law, including:</p>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Personal Data Protection Act B.E. 2562 (2019)</li>
+                  <li>Medical Profession Act B.E. 2542 (1999)</li>
+                  <li>Computer-Related Crime Act B.E. 2560 (2017)</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">13.2 Dispute Resolution</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Disputes will first attempt resolution through negotiation</li>
+                  <li>If unresolved, matter will be submitted to Thai courts with jurisdiction</li>
+                  <li>Venue for litigation is Bangkok, Thailand</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">13.3 Severability</h3>
+                <p className="mt-2">If any provision is unenforceable, other provisions remain in effect</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">14. Force Majeure</h2>
+                <p className="mt-2">Company shall not be liable for failure to perform due to:</p>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>National medical emergencies</li>
+                  <li>Natural disasters, war, riots</li>
+                  <li>Compliance with government or agency orders</li>
+                  <li>Internet or network system failures</li>
+                  <li>Other events beyond control</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">15. Notifications and Communications</h2>
+                <h3 className="mt-4 font-medium">15.1 Notification Channels</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>In-app notifications (Push Notification)</li>
+                  <li>Registered email</li>
+                  <li>SMS for emergencies</li>
+                  <li>Website announcements</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">15.2 Contacting Company</h3>
+                <div className="mt-2">
+                  <p><strong>E.S.M. Solution Co. Ltd</strong></p>
+                  <ul className="list-disc pl-6 mt-2 space-y-1">
+                    <li>Email: support@esmSolution.co.th</li>
+                    <li>Phone: 02-XXX-XXXX</li>
+                    <li>LINE Official: @SmartTelemed</li>
+                    <li>Address: [Office Address]</li>
+                    <li>Business Hours: Monday-Friday 8:00-17:00</li>
+                  </ul>
+                </div>
+
+                <h3 className="mt-4 font-medium">15.3 Emergency Reporting</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Emergencies: Call 1669 or 191</li>
+                  <li>Urgent technical issues: Call 02-XXX-XXXX (24 hours)</li>
+                  <li>Security issue reporting: security@esmSolution.co.th</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">16. Changes to Terms</h2>
+                <h3 className="mt-4 font-medium">16.1 Right to Modify</h3>
+                <p className="mt-2">Company may modify these Terms by:</p>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Notifying users at least 30 days in advance</li>
+                  <li>Announcing through main communication channels</li>
+                  <li>Providing opportunity for user feedback</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">16.2 Effective Date</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Changes take effect on announced date</li>
+                  <li>Continued use constitutes acceptance of changes</li>
+                  <li>If unacceptable, Service use may be terminated</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">16.3 Retention of Previous Terms</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Previous versions retained for reference</li>
+                  <li>Available in App documentation section</li>
+                  <li>Users may request previous versions</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">17. Additional Terms for Medical Personnel</h2>
+                <h3 className="mt-4 font-medium">17.1 Professional Licenses</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Must have valid, unexpired professional licenses</li>
+                  <li>Must notify of any license status changes</li>
+                  <li>May not provide services when license is suspended or revoked</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">17.2 Medical Ethics</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Must comply with medical and nursing codes of ethics</li>
+                  <li>Strictly maintain patient confidentiality</li>
+                  <li>Provide treatment to best of knowledge and ability</li>
+                  <li>Refer patients when beyond scope of competence</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">17.3 Medical Liability</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Responsible for diagnoses and treatments provided</li>
+                  <li>Must have adequate professional liability insurance</li>
+                  <li>Comply with professional standards and laws</li>
+                  <li>Document medical records accurately and completely</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">18. Additional Terms for Community Health Volunteers</h2>
+                <h3 className="mt-4 font-medium">18.1 Qualifications and Training</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Must complete training and be certified by relevant authorities</li>
+                  <li>Must have valid volunteer health certificate</li>
+                  <li>Must attend supplementary training as required</li>
+                  <li>Operate under medical personnel supervision</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">18.2 Scope of Practice</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Provide basic health advice</li>
+                  <li>Assist with basic vital sign measurements</li>
+                  <li>Relay information to medical personnel</li>
+                  <li>Cannot diagnose diseases or prescribe medications</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">18.3 Reporting and Supervision</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Report work performance as scheduled</li>
+                  <li>Receive supervision from medical personnel</li>
+                  <li>Report problems or concerns immediately when identified</li>
+                  <li>Attend meetings and training as scheduled</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">19. Insurance and Compensation</h2>
+                <h3 className="mt-4 font-medium">19.1 Liability Insurance</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Company has public liability insurance</li>
+                  <li>Covers damages from service provision</li>
+                  <li>Does not cover User or third-party errors</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">19.2 Compensation Fund</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Fund available for damage compensation when necessary</li>
+                  <li>Compensation consideration follows specified criteria</li>
+                  <li>Affected parties may file claims</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">20. Support and Training</h2>
+                <h3 className="mt-4 font-medium">20.1 User Support</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Help Desk provides support during business hours</li>
+                  <li>User manual and FAQ in App</li>
+                  <li>Tutorial videos for various features</li>
+                  <li>Regular updates and news</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">20.2 Training</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Training provided for new users</li>
+                  <li>In-depth training for medical personnel</li>
+                  <li>Skill enhancement training for community health volunteers</li>
+                  <li>Usage capability certification</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold">21. Regulatory Compliance</h2>
+                <h3 className="mt-4 font-medium">21.1 Legal Compliance</h3>
+                <p className="mt-2">Company and Users must comply with:</p>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Public health and professional practice laws</li>
+                  <li>Personal data protection laws</li>
+                  <li>Computer and communication laws</li>
+                  <li>Regulatory agency regulations</li>
+                </ul>
+
+                <h3 className="mt-4 font-medium">21.2 Audit and Assessment</h3>
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Regular compliance audits</li>
+                  <li>Service quality assessments</li>
+                  <li>User satisfaction monitoring</li>
+                  <li>Continuous improvement and development</li>
+                </ul>
+              </section>
+
+              <hr className="my-6" />
+              <section>
+                <h2 className="text-xl font-semibold">Acceptance of Terms</h2>
+                <p className="mt-2">Use of Smart Telemed App constitutes full acceptance of these Terms of Service.</p>
+                <p className="mt-2">If you have questions or need assistance, please contact our support team through the channels specified above.</p>
+                <div className="mt-4 space-y-1 text-sm text-gray-600">
+                  <p>Last Updated: October 21, 2025</p>
+                  <p>Document Version: 1.0</p>
+                  <p>Approved by: Chief Executive Officer, E.S.M. Solution Co. Ltd</p>
+                </div>
+                <p className="mt-4 italic text-sm">This document is prepared to comply with Thai law and international standards for medical service provision</p>
+              </section>
+            </>
+          ) : (
+            <>
+              {/* Thai version */}
           <section>
             <h2 className="text-xl font-semibold">1. การยอมรับข้อกำหนด</h2>
             <p className="mt-2">
-              การดาวน์โหลด ติดตั้ง ลงทะเบียน หรือใช้งานแอปพลิเคชัน Smart Telemed V4 ("แอป", "บริการ") ถือเป็นการยอมรับและตกลงที่จะปฏิบัติตามข้อกำหนดในการให้บริการฉบับนี้ ("ข้อกำหนด") อย่างครบถ้วน
+              การดาวน์โหลด ติดตั้ง ลงทะเบียน หรือใช้งานแอปพลิเคชัน Smart Telemed ("แอป", "บริการ") ถือเป็นการยอมรับและตกลงที่จะปฏิบัติตามข้อกำหนดในการให้บริการฉบับนี้ ("ข้อกำหนด") อย่างครบถ้วน
             </p>
             <p className="mt-2">หากท่านไม่ยอมรับข้อกำหนดเหล่านี้ โปรดอย่าใช้งานบริการของเรา</p>
           </section>
@@ -31,11 +519,11 @@ export default function Terms() {
             <h2 className="text-xl font-semibold">2. คำนิยาม</h2>
             <ul className="list-disc pl-6 mt-2 space-y-1">
               <li><strong>"บริษัท"</strong> หมายถึง บริษัท E.S.M. Solution Co. Ltd</li>
-              <li><strong>"ผู้ใช้"</strong> หมายถึง บุคคลที่ใช้งานแอปพลิเคชัน Smart Telemed V4</li>
+              <li><strong>"ผู้ใช้"</strong> หมายถึง บุคคลที่ใช้งานแอปพลิเคชัน Smart Telemed</li>
               <li><strong>"ผู้ป่วย"</strong> หมายถึง ผู้ใช้ที่เป็นผู้รับบริการทางการแพทย์</li>
               <li><strong>"บุคลากรทางการแพทย์"</strong> หมายถึง แพทย์ พยาบาล และเจ้าหน้าที่สาธารณสุขที่ใช้งานแอป</li>
               <li><strong>"อาสาสมัครสาธารณสุข"</strong> หมายถึง อสม. หรือผู้ช่วยในการดูแลสุขภาพชุมชน</li>
-              <li><strong>"บริการ"</strong> หมายถึง บริการการแพทย์ทางไกลผ่านแอปพลิเคชัน Smart Telemed V4</li>
+              <li><strong>"บริการ"</strong> หมายถึง บริการการแพทย์ทางไกลผ่านแอปพลิเคชัน Smart Telemed</li>
               <li><strong>"อุปกรณ์ทางการแพทย์"</strong> หมายถึง อุปกรณ์วัดสัญญาณชีพที่เชื่อมต่อกับแอป</li>
             </ul>
           </section>
@@ -106,7 +594,7 @@ export default function Terms() {
             </ul>
 
             <h3 className="mt-4 font-medium">5.2 ข้อจำกัดของบริการ</h3>
-            <p className="mt-2">บริการ Smart Telemed V4 <strong>ไม่สามารถ</strong>:</p>
+            <p className="mt-2">บริการ Smart Telemed <strong>ไม่สามารถ</strong>:</p>
             <ul className="list-disc pl-6 mt-2 space-y-1">
               <li>ทดแทนการตรวจรักษาโดยแพทย์โดยตรงได้ทั้งหมด</li>
               <li>ใช้สำหรับกรณีฉุกเฉินที่ต้องการการรักษาทันที</li>
@@ -162,7 +650,7 @@ export default function Terms() {
             <h2 className="text-xl font-semibold">7. ข้อมูลและความเป็นส่วนตัว</h2>
             <h3 className="mt-4 font-medium">7.1 การปฏิบัติตามนโยบายความเป็นส่วนตัว</h3>
             <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>การใช้งานแอปอยู่ภายใต้นโยบายความเป็นส่วนตัวของ Smart Telemed V4</li>
+              <li>การใช้งานแอปอยู่ภายใต้นโยบายความเป็นส่วนตัวของ Smart Telemed</li>
               <li>ผู้ใช้ควรอ่านและทำความเข้าใจนโยบายความเป็นส่วนตัวก่อนใช้งาน</li>
             </ul>
 
@@ -209,7 +697,7 @@ export default function Terms() {
             <h2 className="text-xl font-semibold">9. ทรัพย์สินทางปัญญา</h2>
             <h3 className="mt-4 font-medium">9.1 ลิขสิทธิ์และเครื่องหมายการค้า</h3>
             <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>แอป Smart Telemed V4 และเนื้อหาทั้งหมดเป็นทรัพย์สินของบริษัท</li>
+              <li>แอป Smart Telemed และเนื้อหาทั้งหมดเป็นทรัพย์สินของบริษัท</li>
               <li>ห้ามทำซ้ำ แจกจ่าย หรือดัดแปลงโดยไม่ได้รับอนุญาต</li>
               <li>เครื่องหมายการค้าและโลโก้เป็นของบริษัทและบุคคลที่สามที่เกี่ยวข้อง</li>
             </ul>
@@ -490,15 +978,17 @@ export default function Terms() {
           <hr className="my-6" />
           <section>
             <h2 className="text-xl font-semibold">การยอมรับข้อกำหนด</h2>
-            <p className="mt-2">การใช้งานแอป Smart Telemed V4 ถือเป็นการยอมรับข้อกำหนดในการให้บริการฉบับนี้อย่างครบถ้วน</p>
+            <p className="mt-2">การใช้งานแอป Smart Telemed ถือเป็นการยอมรับข้อกำหนดในการให้บริการฉบับนี้อย่างครบถ้วน</p>
             <p className="mt-2">หากมีข้อสงสัยหรือต้องการความช่วยเหลือ โปรดติดต่อทีมสนับสนูนของเราตามช่องทางที่ระบุไว้</p>
             <div className="mt-4 space-y-1 text-sm text-gray-600">
               <p>อัปเดตล่าสุด: 21 ตุลาคม 2568</p>
               <p>เวอร์ชันเอกสาร: 1.0</p>
-              <p>ผู้อนุมัติ: [ชื่อผู้บริหาร], ประธานเจ้าหน้าที่บริหาร บริษัท E.S.M. Solution Co. Ltd</p>
+              <p>ผู้อนุมัติ: ประธานเจ้าหน้าที่บริหาร บริษัท E.S.M. Solution Co. Ltd</p>
             </div>
             <p className="mt-4 italic text-sm">เอกสารนี้จัดทำขึ้นเพื่อให้สอดคล้องกับกฎหมายไทยและมาตรฐานสากลด้านการให้บริการทางการแพทย์</p>
           </section>
+            </>
+          )}
         </div>
       </div>
     </section>

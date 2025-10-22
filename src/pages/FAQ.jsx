@@ -4,7 +4,7 @@ export default function FAQ() {
   const { lang } = useLang();
   const isEn = lang === 'en';
   const faqsTh = [
-    { q: 'Smart Telemed V4 คืออะไร?', a: 'แพลตฟอร์มการแพทย์ทางไกลที่ช่วยให้ผู้ป่วยพูดคุยกับแพทย์ผ่านวิดีโอคอล วัดสัญญาณชีพจากอุปกรณ์ที่บ้าน และจัดการนัดหมายได้ในที่เดียว' },
+    { q: 'Smart Telemed คืออะไร?', a: 'แพลตฟอร์มการแพทย์ทางไกลที่ช่วยให้ผู้ป่วยพูดคุยกับแพทย์ผ่านวิดีโอคอล วัดสัญญาณชีพจากอุปกรณ์ที่บ้าน และจัดการนัดหมายได้ในที่เดียว' },
     { q: 'ต้องลงทะเบียนอย่างไร?', a: 'ลงทะเบียนด้วยข้อมูลส่วนตัวที่ถูกต้องและยืนยันตัวตนตามที่ระบบกำหนด จากนั้นเข้าสู่ระบบเพื่อเริ่มใช้งาน' },
     { q: 'แอพรองรับอุปกรณ์วัดอะไรบ้าง?', a: 'รองรับเครื่องวัดความดัน ออกซิเจนปลายนิ้ว เครื่องวัดอุณหภูมิ เครื่องชั่งน้ำหนัก และเครื่องวัดน้ำตาลในเลือดที่เชื่อมต่อผ่าน Bluetooth' },
     { q: 'อุปกรณ์ต้องมีสเปกขั้นต่ำอย่างไร?', a: 'สมาร์ตโฟน iOS/Android ที่รองรับ Bluetooth 4.0 ขึ้นไป และมีการเชื่อมต่ออินเทอร์เน็ตที่เสถียร' },
@@ -47,7 +47,7 @@ export default function FAQ() {
   ];
 
   const faqsEn = [
-    { q: 'What is Smart Telemed V4?', a: 'A telemedicine platform that enables patients to video call doctors, capture vital signs at home, and manage appointments in one place.' },
+    { q: 'What is Smart Telemed?', a: 'A telemedicine platform that enables patients to video call doctors, capture vital signs at home, and manage appointments in one place.' },
     { q: 'How do I register?', a: 'Register with accurate personal information and follow the identity verification steps, then sign in to start.' },
     { q: 'Which devices are supported?', a: 'Common devices like blood pressure monitors, pulse oximeters, thermometers, smart scales, and glucose meters via Bluetooth.' },
     { q: 'Minimum device requirements?', a: 'iOS/Android smartphones supporting Bluetooth 4.0+ with a stable internet connection.' },

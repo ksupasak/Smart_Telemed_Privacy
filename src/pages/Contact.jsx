@@ -43,7 +43,7 @@ export default function Contact() {
     <section className="section">
       <div className="container-slim max-w-3xl">
         <h1 className="text-3xl font-bold">{isEn ? 'Contact Us' : 'ติดต่อเรา'}</h1>
-        <p className="mt-2 text-gray-600">{isEn ? 'For help, feedback, or questions about Smart Telemed V4, send us a message via the form or channels below.' : 'หากต้องการความช่วยเหลือ ข้อเสนอแนะ หรือสอบถามการใช้งาน Smart Telemed V4 สามารถส่งข้อความผ่านแบบฟอร์มหรือช่องทางด้านล่างได้เลย'}</p>
+        <p className="mt-2 text-gray-600">{isEn ? 'For help, feedback, or questions about Smart Telemed, send us a message via the form or channels below.' : 'หากต้องการความช่วยเหลือ ข้อเสนอแนะ หรือสอบถามการใช้งาน Smart Telemed สามารถส่งข้อความผ่านแบบฟอร์มหรือช่องทางด้านล่างได้เลย'}</p>
 
         {/* Contact details */}
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
