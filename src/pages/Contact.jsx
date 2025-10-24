@@ -50,8 +50,8 @@ export default function Contact() {
           <div className="rounded-xl border bg-white p-5 shadow-soft">
             <h2 className="text-sm font-semibold text-gray-800">{isEn ? 'E.S.M. Solution Co. Ltd' : 'บริษัท E.S.M. Solution Co. Ltd'}</h2>
             <ul className="mt-3 space-y-2 text-sm text-gray-700">
-              <li><span className="font-medium">{isEn ? 'Email:' : 'อีเมล:'}</span> support@esmSolution.co.th</li>
-              <li><span className="font-medium">{isEn ? 'Phone:' : 'โทรศัพท์:'}</span> 02-XXX-XXXX</li>
+              <li><span className="font-medium">{isEn ? 'Email:' : 'อีเมล:'}</span> support@esm-solution.co.th</li>
+              <li><span className="font-medium">{isEn ? 'Phone:' : 'โทรศัพท์:'}</span> 098 169 2641</li>
               <li><span className="font-medium">{isEn ? 'Business hours:' : 'เวลาทำการ:'}</span> {isEn ? 'Mon–Fri 08:00–17:00' : 'จันทร์–ศุกร์ 08:00–17:00 น.'}</li>
             </ul>
           </div>

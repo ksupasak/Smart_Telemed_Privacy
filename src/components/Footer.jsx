@@ -1,4 +1,5 @@
 import { AppBadges } from "./Badges";
+import { Link } from 'react-router-dom';
 import { useLang } from '../i18n/LangContext';
 
 export default function Footer() {
@@ -33,10 +34,10 @@ export default function Footer() {
         </div>
         <div className="text-sm text-gray-600">
           <ul className="space-y-2">
-            <li><a className="hover:text-brand" href="#">{t('footer.home')}</a></li>
-            <li><a className="hover:text-brand" href="#safety">{t('footer.privacy')}</a></li>
-            <li><a className="hover:text-brand" href="#policy">{t('footer.terms')}</a></li>
-            <li><a className="hover:text-brand" href="#faq">{t('footer.faq')}</a></li>
+            <li><Link className="hover:text-brand transition-colors" to="/">{t('footer.home')}</Link></li>
+            <li><Link className="hover:text-brand transition-colors" to="/privacy">{t('footer.privacy')}</Link></li>
+            <li><Link className="hover:text-brand transition-colors" to="/terms">{t('footer.terms')}</Link></li>
+            <li><Link className="hover:text-brand transition-colors" to="/faq">{t('footer.faq')}</Link></li>
           </ul>
         </div>
         <div id="contact" className="text-sm text-gray-600">

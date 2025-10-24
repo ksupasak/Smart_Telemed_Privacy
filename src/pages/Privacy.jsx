@@ -739,8 +739,8 @@ export default function Privacy() {
               <p><strong>บริษัท E.S.M. Solution Co. Ltd</strong></p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
                 <li>อีเมล: privacy@esmSolution.co.th</li>
-                <li>โทรศัพท์: 02-XXX-XXXX</li>
-                <li>ที่อยู่: [ที่อยู่สำนักงาน]</li>
+                <li>โทรศัพท์: 0981692641</li>
+                <li>ที่อยู่: [942/88 อาคารชาญ อิสสระ ทาวเวอร์ ชั้น 3 ถนนพระราม 4 แขวงสุริยวงศ์ เขตบางรัก กรุงเทพฯ 10500]</li>
               </ul>
             </div>
 
